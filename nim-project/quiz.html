@@ -16,7 +16,11 @@
     }
 </script>
 
-<h1>Test your knowledge of Nim!</h1>
+<h1>
+    Time for some Nim Quiz questions!
+    <br>
+    Test your knowledge of Nim!
+</h1>
 <h2>What do fununim like to do?</h2>
 <label>
     <input type="radio" id="answer8" name="question1">
@@ -139,5 +143,57 @@ Go underwater
 </label>
 <p>
     <input type="button" value="Submit Answer" onclick="checkQuestion5()">
+
+    <script>
+        function checkQuestion6() {
+            if (document.getElementById('answer690').checked) {
+                alert('Nice!');
+            } else {
+                alert('Clue: Cafeim give you cafe, and cafe is a type of food.');
+            }
+        }
+    </script>
+
+<h2>Cafeim are _________.</h2>
+<label>
+    <input type="radio" id="answer1250" name="question6">
+    Cheakernim
+</label>
+<label>
+    <input type="radio" id="answer690" name="question6">
+    Foodernim
+</label>
+<label>
+    <input type="radio" id="answer780" name="question6">
+    Nimnim
+</label>
+<p>
+    <input type="button" value="Submit Answer" onclick="checkQuestion6()">
+
+    <script>
+        function checkQuestion7() {
+            if (document.getElementById('answer250').checked) {
+                alert('Excellent!');
+            } else {
+                alert('Clue: Pretchenim and Geronim are linked.');
+            }
+        }
+    </script>
+
+<h2>Pretchenim like to lick _________.</h2>
+<label>
+    <input type="radio" id="answer250" name="question7">
+    Geronim
+</label>
+<label>
+    <input type="radio" id="answer690" name="question7">
+    Foodernim
+</label>
+<label>
+    <input type="radio" id="answer780" name="question7">
+    Pretewim
+</label>
+<p>
+    <input type="button" value="Submit Answer" onclick="checkQuestion7()">
 </body>
 </html>
