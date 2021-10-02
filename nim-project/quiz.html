@@ -3,23 +3,27 @@
 <head>
     <meta charset="utf-8">
     <title>Nim Quiz</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./code_pictures/favicon-32x32.png">
 </head>
 <body style="background-color: darkorange">
 
 <script>
     function checkQuestion1() {
         if (document.getElementById('answer4').checked) {
-            alert('Correct!');
+            return true;//alert('Correct!');
         } else {
-            alert('You can do it!');
+            return false;//alert('You can do it!');
         }
     }
 </script>
 
 <h1>
     Time for some Nim Quiz questions!
-    <br>
-    Test your knowledge of Nim!
+    <h4 style="float:right;margin-right:100px">
+        <a href="./answers.html">Answers</a>
+    </h4> </p>
+    <p>
+        Test your knowledge of Nim!
 </h1>
 <h2>What do fununim like to do?</h2>
 <label>
@@ -35,8 +39,6 @@
     Swim
 </label>
 <p>
-<input type="button" value="Submit Answer" onclick="checkQuestion1()">
-
 
 
 <h2>What can`t nanunim do?</h2>
@@ -53,14 +55,13 @@
     Fly
 </label>
 <p>
-    <input type="button" value="Submit Answer" onclick="checkQuestion2()">
 
     <script>
         function checkQuestion2() {
             if (document.getElementById('answer7').checked) {
-                alert('Nice one!!');
+                return true;//alert('Nice one!!');
             } else {
-                alert('Try Again!');
+                return false;//alert('Try Again!');
             }
         }
     </script>
@@ -68,9 +69,9 @@
     <script>
         function checkQuestion3() {
             if (document.getElementById('answer0').checked) {
-                alert('You`re right!');
+                return true;//alert('You`re right!');
             } else {
-                alert('Good try!');
+                return false;//alert('Good try!');
             }
         }
     </script>
@@ -78,7 +79,7 @@
 <h2>Panunim can _________.</h2>
 <label>
     <input type="radio" id="answer2" name="question3">
-Go underwater
+    Go underwater
 </label>
 <label>
     <input type="radio" id="answer6" name="question3">
@@ -89,15 +90,14 @@ Go underwater
     Shoot lava out of their eyes
 </label>
 <p>
-    <input type="button" value="Submit Answer" onclick="checkQuestion3()">
 
 
     <script>
         function checkQuestion4() {
             if (document.getElementById('answer125').checked) {
-                alert('Perfect!');
+                return true;//alert('Perfect!');
             } else {
-                alert('You`re nearly there!');
+                return false;//alert('You`re nearly there!');
             }
         }
     </script>
@@ -116,14 +116,13 @@ Go underwater
     Nimnim
 </label>
 <p>
-    <input type="button" value="Submit Answer" onclick="checkQuestion4()">
 
     <script>
         function checkQuestion5() {
             if (document.getElementById('answer20').checked) {
-                alert('Great!');
+                return true;//alert('Great!');
             } else {
-                alert('Keep trying!');
+                return false;//alert('Keep trying!');
             }
         }
     </script>
@@ -142,14 +141,13 @@ Go underwater
     2
 </label>
 <p>
-    <input type="button" value="Submit Answer" onclick="checkQuestion5()">
 
     <script>
         function checkQuestion6() {
             if (document.getElementById('answer690').checked) {
-                alert('Nice!');
+                return true;//alert('Nice!');
             } else {
-                alert('Clue: Cafeim give you cafe, and cafe is a type of food.');
+                return false;//alert('Clue: Cafeim give you cafe, and cafe is a type of food.');
             }
         }
     </script>
@@ -168,15 +166,51 @@ Go underwater
     Nimnim
 </label>
 <p>
-    <input type="button" value="Submit Answer" onclick="checkQuestion6()">
 
     <script>
         function checkQuestion7() {
             if (document.getElementById('answer250').checked) {
-                alert('Excellent!');
+                return true;//alert('Excellent!');
             } else {
-                alert('Clue: Pretchenim and Geronim are linked.');
+                return false;//alert('Clue: Pretchenim and Geronim are linked.');
             }
+        }
+
+        function checkQuiz() {
+            let score = 0;
+            if (checkQuestion1()) {
+                score = score + 10;
+            }
+            if (checkQuestion2()) {
+                score = score + 10;
+            }
+            if (checkQuestion3()) {
+                score = score + 10;
+            }
+            if (checkQuestion4()) {
+                score = score + 10;
+            }
+            if (checkQuestion5()) {
+                score = score + 10;
+            }
+            if (checkQuestion6()) {
+                score = score + 10;
+            }
+            if (checkQuestion7()) {
+                score = score + 10;
+            }
+            if (checkQuestion8()) {
+                score = score + 10;
+            }
+            if (checkQuestion9()) {
+                score = score + 10;
+            }
+            if (checkQuestion10()) {
+                score = score + 10;
+            }
+
+
+            alert(`Your score is ${score}`);
         }
     </script>
 
@@ -186,14 +220,91 @@ Go underwater
     Geronim
 </label>
 <label>
-    <input type="radio" id="answer690" name="question7">
+    <input type="radio" id="answer6909" name="question7">
     Foodernim
 </label>
 <label>
-    <input type="radio" id="answer780" name="question7">
+    <input type="radio" id="answer70" name="question7">
     Pretewim
 </label>
 <p>
-    <input type="button" value="Submit Answer" onclick="checkQuestion7()">
+
+    <script>
+        function checkQuestion8() {
+            if (document.getElementById('answer60').checked) {
+                return true;//alert('Nice!');
+            } else {
+                return false;//alert('Clue: Cafeim give you cafe, and cafe is a type of food.');
+            }
+        }
+    </script>
+
+<h2>Pretewim are _________.</h2>
+<label>
+    <input type="radio" id="answer25" name="question8">
+    Green
+</label>
+<label>
+    <input type="radio" id="answer60" name="question8">
+    Orange
+</label>
+<label>
+    <input type="radio" id="answer05" name="question8">
+    Blue
+</label>
+<p>
+
+    <script>
+        function checkQuestion9() {
+            if (document.getElementById('answer98').checked) {
+                return true;//alert('Nice!');
+            } else {
+                return false;//alert('Clue: Cafeim give you cafe, and cafe is a type of food.');
+            }
+        }
+    </script>
+
+<h2>Lelentim are _________.</h2>
+<label>
+    <input type="radio" id="answer98" name="question9">
+    Light yellow
+</label>
+<label>
+    <input type="radio" id="answer90" name="question9">
+    Dark brown
+</label>
+<label>
+    <input type="radio" id="answer120" name="question9">
+    Bright red
+</label>
+<p>
+    <script>
+        function checkQuestion10() {
+            if (document.getElementById('answer600').checked) {
+                return true;//alert('Nice!');
+            } else {
+                return false;//alert('Clue: Cafeim give you cafe, and cafe is a type of food.');
+            }
+        }
+    </script>
+
+<h2>Geronim can make their beard _________.</h2>
+<label>
+    <input type="radio" id="answer600" name="question10">
+    Grow
+</label>
+<label>
+    <input type="radio" id="answer1258" name="question10">
+    Shrink
+</label>
+<label>
+    <input type="radio" id="answer680" name="question10">
+    Disappear
+</label>
+<p>
+
+    <input type="button" value="Submit Quiz" onclick="checkQuiz()">
+</body>
 </body>
 </html>
+
