@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        let newItem = document.createElement("div");
+        newItem.innerHTML = "New item";
+        newItem = document.createElement("div");
+        document.getElementById("List").appendChild(newItem);{
+        }
+    </script>
+    <meta charset="UTF-8">
+    <title>/to/do/app/</title>
+</head>
+<script>
+    function addItem() {
+        let newItem = document.createElement("div");
+        newItem.innerHTML = document.getElementById("box").value;
+        document.getElementById("list").appendChild(newItem);
+    }
+</script>
+<body>
+<p>
+<h1>Shopping list</h1>
+<br/>
+<label for="box"><input type="text" id="box" value="type here to add shopping"></label>
+<br/>
+<input type="button" value="Add-item"/>
+<br/>
+</body>
+</html>

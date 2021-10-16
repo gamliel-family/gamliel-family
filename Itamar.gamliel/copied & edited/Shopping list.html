@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <script>function addItem() {
+        let newItem = document.createElement("div");
+        newItem.innerHTML = "New item";
+        newItem = document.createElement("div");
+        document.getElementById("List").appendChild(newItem);
+    }</script>
+    <meta charset="utf-8">
+    <title>https://app.shoppinglist.www.com</title>
+<body><h1>Shopping list</h1>press F5 or reload to reset.
+<p>
+    <script>function addItem() {
+        alert('Dont forget some things!');
+    }</script>
+    <label></label>
+    <style>input[type="button" ] {
+        background-color: #ffea00;
+    }</style>
+    <label><input type="search" id="box" placeholder="Type here to add item..."/>
+        <script>function addItem() {
+            let newItem = document.createElement("div");
+            newItem.innerHTML = document.getElementById("box").value;
+            newItem.onclick = removeItem;
+            document.getElementById("list").appendChild(newItem);
+            let newButton = document.createElement("button");
+            newButton.innerText = "Remove";
+            newButton.onclick = () => {
+                removeItem(newItem);
+                removeItem(newButton);
+            };
+            document.getElementById("list").appendChild(newButton);
+        }
+
+        function removeItem(item) {
+            document.getElementById("list").removeChild(item);
+        }</script>
+    </label>
+<p></p><input type="button" value="Add item" onclick="addItem();"/>
+<div id="list"></div>
+</body>
+</html>
