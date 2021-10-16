@@ -1,0 +1,179 @@
+<!doctype html><span style="text-align: center;color: white">recommended better in firefox</span><br>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Game</title>
+    <style>#board {
+        border: 1px solid black;
+        background-color: #20ff00;
+        height: 350px;
+        width: 650px;
+    }
+
+    .character {
+        bacground: url('/pictures/Guest.jpg');
+        background-size: cover;
+        width: 120px;
+        height: 120px;
+        padding: 10px;
+        margin: 10px;
+        float: left;
+    }
+
+    .thief {
+        background: url('/pictures/theif.jpg');
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .visible {
+        display: block;
+    }</style>
+</head>
+<img src="pictures/apple-touch-icon.png" style="width: 100px">
+<body><input type="button" value="Play" onclick="startGame();">
+<script>
+function startGame() {
+    setTimeout(gameTimer, 1000);
+}
+function gameTimer() {
+    setTimeout(gameTimer, 1000);
+}
+function gameLoop() {
+    alert("Game Over.");
+    setTimeout(gameLoop, 3000);
+}</script>
+<div id="board">
+    <div style="background-color: lightblue" class="character">1</div>
+    <div style="background-color: lightblue" class="character">2</div>
+    <div style="background-color: lightblue" class="character">3</div>
+    <div style="background-color: lightblue" class="character">4</div>
+    <div style="background-color: lightblue" class="character">5</div>
+    <div style="background-color: red" class="character">6</div>
+</div>
+<script>function startGame() {
+    gameLoop();
+    let loops = 0;
+    let peopleVisible = false;
+    let gameScore = 0;
+
+    function gameLoop() {
+        peopleVisible = !peopleVisible;
+        createCharacters();
+        loops++;
+        if (loops < 12) {
+            setTimeout(gameLoop, peopleVisible ? 1000 : 13000);
+        } else {
+            alert('You scored' + gameScore);
+        }
+    }
+}
+
+function startGame() {
+    gameLoop();
+
+    function gameLoop() {
+        let loops = 0;
+        loops++;
+        if (loops < 12) {
+            setTimeout(gameLoop, 3000);
+        } else {
+            alert("Game over.");
+        }
+    }
+
+    function startGame() {
+        gameLoop();
+    }
+
+    let peopleVisible = !peopleVisible;
+    createCharacters();
+    {
+        function createCharacters() {
+            let board = document.getElementById("board");
+            for (let index = 0; index < 6; index++) {
+                board.children[index].innerHTML = "Guest";
+                board.children[index].onclick = function () {
+                    gameScore += 2;
+                    let randomNumber = Math.floor(Math.random() * 6) + 1;
+                    board.children[randomNumber - 1].innerHTML = "";
+                    board.children[randomNumber - 1].onclick = function () {
+                        gameScore++;
+                    };
+                    board.children[randomNumber - 1].className = classToSet + " thief";
+                }
+            }
+        }
+    }
+}</script>
+<h3>Instructions:</h3>
+<li>Every second 6 colours will be shown on the screen.</li>
+<p></p>
+<li>5 will be Guest colours,</li>
+<p></p>
+<li>1 will be a thief colour.</li>
+<li>if you click on a thief, you gain 1 Point.</li>
+<p></p>
+<li>if you click on a Guest, you lose 2 Points</li>
+<p></p>
+<li>This Happens 13 Times in Total.</li>
+<p></p>
+<li style="font-weight: bold">The aim of the game is to click The thief in 13 Times</li>
+<span style="font-weight: bold"></span><br>_________________________________________________________________________
+______________________________________________________________________________________________________
+__________________________ ______________________________ If You click on The Right Number it will be highlighted Blue
+or white.<br>if you click on the wrong Number, it will be lightblue.<br>also, if you click the right Number but To Many
+Times And its Highlighted, Its Still Game Over.
+<li>Sometimes it Tricks.</li><!---this isSecurity thief Game--><h1>your form*</h1>
+<form action="/Submit.html">
+    <fieldset>
+        <legend>Personalia:</legend>
+        <label for="fname">id="lname" name="lname"><br><br><label for="email">Email:</label><input type="email"
+                                                                                                   id="email"
+                                                                                                   name="email"><br><br><label
+                for="birthday">Birthday:</label><input type="date" id="birthday" name="birthday"><br><br><input
+                type="submit" value="Submit"></label></fieldset>
+    <div id="board"></div>
+</form>
+<style> body {
+    background-color: darkorange
+}</style>
+<style>table, th, td {
+    border: 1px solid black;
+}</style>
+</head>
+<body>
+<style>body {
+    background-color: black;
+}</style>
+<table>
+    <colgroup>
+        <col span="2" style="background-color:red">
+        <col style="background-color:yellow">
+    </colgroup>
+    <tr>
+
+        <th>ISBN</th>
+        <th>Title</th>
+        <th>Price</th>
+    </tr>
+    <tr>
+        <td>3476896</td>
+        <td>My first HTML</td>
+        <td>$53</td>
+    </tr>
+    <tr>
+        <td>5869207</td>
+        <td>My first CSS</td>
+        <td>$49</td>
+        <a href="themonkdiamonddiscovery.html">https://monkdiamonddiscovery.com</a><a href=".html"><a
+            href="NimVars.html">NimVars</a><input type="button" value="reload handler" onclick="sc_setReloadHandler()">tsivonimcoloring</a>
+    </tr>
+</table>
+<a href="update.html">update </a>
+<a href="index.html(4).html">Games</a>
+</body>
+</body>
+</html>

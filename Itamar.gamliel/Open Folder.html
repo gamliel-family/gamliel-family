@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Folder 1</title>
+</head>
+<body>
+<h1>add Folders For folder</h1>
+    <script>
+        function addItem() {
+            let newItem = document.createElement("div");
+            newItem.innerHTML = "New item";
+            newItem = document.createElement("div");
+            document.getElementById("List").appendChild(newItem);
+        }
+    </script>
+    <meta charset="utf-8">
+<body>
+    <script>
+        function addItem() {
+            alert('Dont forget some things!');
+        }
+    </script>
+    <label>
+    </label>
+    <style>
+        input[type="button" ] {
+            background-color: #ffea00;
+        }
+    </style>
+    <label>
+        <input type="text" id="box" placeholder="Type here to add item..."/>
+        <script>
+            function addItem() {
+                let newItem = document.createElement("div");
+                newItem.innerHTML = document.getElementById("box").value;
+                newItem.onclick = removeItem;
+                document.getElementById("list").appendChild(newItem);
+
+                let newButton = document.createElement("button");
+                newButton.innerText = "Remove";
+                newButton.onclick = () => {
+                    removeItem(newItem);
+                    removeItem(newButton);
+                }
+                document.getElementById("list").appendChild(newButton);
+            }
+            function removeItem(item) {
+                document.getElementById("list").removeChild(item);
+            }
+        </script>
+    </label>
+<p>
+</p>
+<input type="button" value="Add item" onclick="addItem();"/>
+<div id="list"></div>
+<a href="downloads.md">document</a>
+</body>
+</body></html>
+
+
