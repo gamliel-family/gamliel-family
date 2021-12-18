@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nim Games</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="code_pictures1/favicon-32x32.png">
+    <script>
+        let count = 0;
+        let timeoutHandle;
+        let foundCards = [];
+
+        function updateCount() {
+            count = count + 1;
+            document.getElementById("number").innerHTML = count;
+            timeoutHandle = setTimeout(updateCount, 1000);
+        }
+
+        function totalOpened() {
+            let totalCardsOpened = 0;
+            [...document.getElementsByClassName("card")].forEach(card => {
+                 if (!card.classList.contains('closed')) {
+                    totalCardsOpened = totalCardsOpened + 1
+                 }
+            })
+            return totalCardsOpened;
+        }
+
+        function allCards() {
+            return [...document.getElementsByClassName("card")];
+        }
+
+        // This function returns an array of opened card names.
+        // For example, if no card is opened, then empty array is returned: [].
+        // If only one card is opened, then array with the card is returned: [card].
+        // If two cards are opened, then array with two cards is returned: [card1, card2]
+        function openedCards() {
+            return allCards().filter(element => !element.classList.contains('closed') && foundCards.indexOf(element) === -1);
+        }
+
+        function resetCount() {
+            count = 0;
+            clearTimeout(timeoutHandle);
+            updateCount();
+        }
+
+        function cardClicked(card) {
+            //card.classList.toggle("closed");
+
+            let openedCardsArray = openedCards();
+
+            if (!card.classList.contains('closed')) {
+                // Here we close the card.
+                card.classList.add("closed");
+            } else if (openedCardsArray.length <2) {
+                // Here we open the card.
+                card.classList.remove("closed");
+
+                // If the opened cards don't match then close them both.
+                openedCardsArray = openedCards();
+                if (openedCardsArray.length === 2) {
+                    if (openedCardsArray[0].dataset.name === openedCardsArray[1].dataset.name) {
+
+                        // Two cards match.
+                        foundCards.push(openedCardsArray[0]);
+                        foundCards.push(openedCardsArray[1]);
+
+                        if (foundCards.length === allCards().length) {
+                            alert(`Well done! you solved the puzzle in ${count} seconds!`);
+                            clearTimeout(timeoutHandle);
+                        }
+                    } else {
+
+                        setTimeout(() => {
+                            openedCardsArray[0].classList.add("closed");
+                            openedCardsArray[1].classList.add("closed");
+                        }, 250)
+                        ;
+                    }
+                }
+            }
+        }
+
+        function playClicked() {
+            resetCount();
+            closeAllCards();
+            shuffle();
+        }
+
+
+        function shuffle() {
+            [...document.getElementsByClassName("card")].forEach(card => {
+                card.style.order = Math.floor(100*Math.random()).toString()
+            })
+        }
+
+        function closeAllCards() {
+            [...document.getElementsByClassName("card")].forEach(card => {
+                card.classList.add("closed")
+            })
+        }
+
+    </script>
+    <style>
+        .card {
+            background-color: rgb(255, 0, 0);width: 200px;height: 200px;margin:20px; display: inline-block;
+            vertical-align: bottom;
+        }
+        .card.closed img {
+            display: none;
+        }
+        .card:not(.closed) span {
+            display: none;
+        }
+    </style>
+
+</head>
+<body style="background-color: dodgerblue;margin:0">
+<div id="number">
+</div>
+<div style="width: 100%; height: 50px; background-color: olive"> <input type="button" value="Play" onclick="playClicked()">
+    <input type="button" value="2 People"> <input type="button" value="Easy">
+    <input type="button" value="Medium">
+    <input type="button" value="Hard">
+</div>
+<div style="background-color: slategrey;margin:15px;display:flex;flex-flow: wrap">
+    <div class="card closed" data-name="sha" style="order: 1" onclick="cardClicked(this)"><span></span><img src="code_pictures1/sha.png" style="width: 200px; height: 200px;" alt="Foretim are like thumbs down!"></div>
+    <div class="card closed" data-name="panunim" style="order: 1" onclick="cardClicked(this)"><span></span><img src="code_pictures1/panunim.png" style="width: 200px; height: 200px;" alt="Foretim are like thumbs down!"></div>
+    <div class="card closed" data-name="fununim" style="order: 1" onclick="cardClicked(this)"><span></span><img src="code_pictures1/fununim.png" style="width: 200px; height: 200px;" alt="Foretim are like thumbs down!"></div>
+    <div class="card closed" data-name="namunim" style="order: 1" onclick="cardClicked(this)"><span></span><img src="code_pictures1/namunim.png" style="width: 200px; height: 200px;" alt="Foretim are like thumbs down!"></div>
+    <div class="card closed" data-name="for" style="order: 1" onclick="cardClicked(this)"><span></span><img src="code_pictures1/for.png" style="width: 200px; height: 200px;" alt="Foretim are like thumbs down!"></div>
+    <div class="card closed" data-name="for" style="order: 1" onclick="cardClicked(this)"><span></span><img src="code_pictures1/for.png" style="width: 200px; height: 200px;" alt="Foretim are like thumbs down!"></div>
+    <div class="card closed" data-name="namunim" style="order: 1" onclick="cardClicked(this)"><span></span><img src="code_pictures1/namunim.png" style="width: 200px; height: 200px;" alt="Foretim are like thumbs down!"></div>
+    <div class="card closed" data-name="fununim" style="order: 1" onclick="cardClicked(this)"><span></span><img src="code_pictures1/fununim.png" style="width: 200px; height: 200px;" alt="Foretim are like thumbs down!"></div>
+    <div class="card closed" data-name="panunim" style="order: 1" onclick="cardClicked(this)"><span></span><img src="code_pictures1/panunim.png" style="width: 200px; height: 200px;" alt="Foretim are like thumbs down!"></div>
+    <div class="card closed" data-name="sha" style="order: 1" onclick="cardClicked(this)"><span></span><img src="code_pictures1/sha.png" style="width: 200px; height: 200px;" alt="Foretim are like thumbs down!"></div>
+</div>
+<a href="Nim%20Game%202.html">Next game</a>
+</body>
+</html>
