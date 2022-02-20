@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Password</title>
+    <script>
+        let Password = "Use the Password MonkDiamond";
+        alert(Password);
+    </script>
+    <style>
+        body {
+            background-color: #04ffd1;
+            padding: 30px;
+        }
+    </style>
+    <script>
+        function checkPassword() {
+            let password = document.getElementById("passwordBox");
+            let passwordText = password.value;
+            if (passwordText === "MonkDiamond") {
+                return true;
+            }
+            else {
+                alert("Access Denied: Incorrect password");
+            }
+        }
+    </script>
+</head>
+<body>
+<p style="font-size: 30pt">THE MONK DIAMOND DISCOVERY</p>
+Password:<label for="PasswordBox"></label><input id="PasswordBox" type="password"><br>
+<a href="/Itamar.gamliel/themonkdiamonddiscovery.html" onclick="return checkPassword();">
+    Submit
+</a>
+
+<p></p>
+</body>
+</html>
